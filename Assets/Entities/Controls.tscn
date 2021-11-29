@@ -1,0 +1,162 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Assets/Fonts/PressStart2P-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Assets/Scripts/Controls.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Sprites/Player2.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Sprites/Player.png" type="Texture" id=4]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0, 0, 0, 0.890196 )
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
+font_data = ExtResource( 1 )
+
+[sub_resource type="AtlasTexture" id=34]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 128, 128 )
+
+[sub_resource type="SpriteFrames" id=36]
+animations = [ {
+"frames": [ SubResource( 34 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="AtlasTexture" id=35]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 128, 128 )
+
+[sub_resource type="SpriteFrames" id=37]
+animations = [ {
+"frames": [ SubResource( 35 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="Controls" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( -696, 496 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Controls" type="Label" parent="."]
+modulate = Color( 0.501961, 0.501961, 0.501961, 1 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -110.0
+margin_top = -354.0
+margin_right = 34.0
+margin_bottom = -319.0
+rect_scale = Vector2( 1.4, 2 )
+custom_fonts/font = SubResource( 3 )
+text = "Controls"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Text-p1" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -1634.0
+margin_top = -114.0
+margin_right = 462.0
+margin_bottom = 16.0
+rect_scale = Vector2( 1.2, 1.8 )
+custom_fonts/font = SubResource( 2 )
+text = "Player-1
+
+Move: Arrow keys
+Jump: Up arrow key
+"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Text-p2" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -896.0
+margin_top = -114.0
+margin_right = 1200.0
+margin_bottom = 16.0
+rect_scale = Vector2( 1.2, 1.8 )
+custom_fonts/font = SubResource( 2 )
+text = "Player-2
+
+Move: W,A,S,D keys
+Jump: W key
+"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Return" type="Label" parent="."]
+modulate = Color( 0.537255, 0.529412, 0.529412, 1 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -518.0
+margin_top = 354.0
+margin_right = -326.0
+margin_bottom = 370.0
+rect_scale = Vector2( 1.4, 1.6 )
+custom_fonts/font = SubResource( 4 )
+text = "Go Back"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="Return"]
+modulate = Color( 1, 1, 1, 0 )
+self_modulate = Color( 1, 1, 1, 0 )
+show_behind_parent = true
+margin_left = -5.71429
+margin_top = -15.0
+margin_right = 6.28571
+margin_bottom = 5.00002
+rect_scale = Vector2( 16.9682, 2.19773 )
+toggle_mode = true
+
+[node name="FakePlayer1" type="AnimatedSprite" parent="."]
+position = Vector2( 216, 324 )
+scale = Vector2( 0.619, 0.619 )
+frames = SubResource( 36 )
+
+[node name="FakePlayer2" type="AnimatedSprite" parent="."]
+position = Vector2( 966, 330 )
+scale = Vector2( 0.619, 0.619 )
+frames = SubResource( 37 )
