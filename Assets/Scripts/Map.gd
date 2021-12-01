@@ -58,7 +58,7 @@ func _process(delta):
 			Global.music_on = true
 		
 		if Global.music_on:
-			$Music.stream = load("res://Assets/Music/2021-10-19_-_Funny_Bit_-_www.FesliyanStudios.com.mp3")
+			$Music.stream = load("res://Assets/Music/2019-12-11_-_Retro_Platforming_-_David_Fesliyan.mp3")
 			$Music.play()
 			
 		else:

@@ -106,7 +106,7 @@ func _process(delta):
 	if $MusicOff/Button.pressed and Input.is_action_just_pressed("LMB"):
 		
 		if Global.music_on == true:
-			
+			Global.start_bg_music_pos = $Music.get_playback_position()
 			$MusicOff.texture = load("res://Assets/Sprites/Ui/musicOff.png")
 			Global.music_on = false
 		else:
@@ -114,8 +114,9 @@ func _process(delta):
 			Global.music_on = true
 		
 		if Global.music_on:
-			$Music.stream = load("res://Assets/Music/2021-10-19_-_Funny_Bit_-_www.FesliyanStudios.com.mp3")
+			$Music.stream = load("res://Assets/Music/2019-12-11_-_Retro_Platforming_-_David_Fesliyan.mp3")
 			$Music.play()
+			$Music.seek(Global.start_bg_music_pos)
 			
 		else:
 			$Music.stream = load("res://Assets/Sfx/Empty.wav")

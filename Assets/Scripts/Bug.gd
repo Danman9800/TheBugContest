@@ -18,7 +18,7 @@ func _ready():
 
 
 func _physics_process(delta):
-	xspd = rng.randi_range(-1, 1)
+	xspd = rng.randi_range(-2, 2)
 	self.global_position.x -= 7.3 + spd - delta
 	self.global_position.y -= xspd
 	

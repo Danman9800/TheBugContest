@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 export var enabled = true
 var mvdir = 0
-var xSpeed = 286
+var xSpeed = 290
 var velocity = Vector2(0,0)
 var start_pos = Vector2(0,720)
 var ded = false
@@ -30,13 +30,13 @@ func _physics_process(delta):
 		action()
 		if !is_on_floor():
 			
-			velocity.y +=25
+			velocity.y +=27
 		else:
 			velocity.x = xSpeed * mvdir 
 			velocity.y = 0
 		if Input.is_action_pressed("p2_jump") and is_on_floor():
 			$Jump.play()
-			velocity.y -= 445
+			velocity.y -= 450
 		Global.player2_ded = ded
 			
 		if Global.multi_player and !Global.player1_ded: 
