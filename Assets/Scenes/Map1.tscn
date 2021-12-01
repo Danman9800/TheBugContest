@@ -17,7 +17,7 @@
 [ext_resource path="res://Assets/Sprites/Ui/musicOn.png" type="Texture" id=15]
 [ext_resource path="res://Assets/Sprites/Ui/audioOff.png" type="Texture" id=16]
 [ext_resource path="res://Assets/Sprites/Ui/audioOn.png" type="Texture" id=17]
-[ext_resource path="res://Assets/Music/woods.wav" type="AudioStream" id=18]
+[ext_resource path="res://Assets/Music/2019-12-11_-_Retro_Platforming_-_David_Fesliyan.mp3" type="AudioStream" id=18]
 
 [sub_resource type="OccluderPolygon2D" id=22]
 polygon = PoolVector2Array( 128, 128, 0, 128, 0, 0, 128, 0 )
@@ -312,14 +312,14 @@ extents = Vector2( 24, 18 )
 
 [sub_resource type="SpriteFrames" id=39]
 animations = [ {
-"frames": [ ExtResource( 17 ) ],
-"loop": true,
-"name": "On",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 16 ) ],
 "loop": true,
 "name": "Off",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 17 ) ],
+"loop": true,
+"name": "On",
 "speed": 5.0
 } ]
 
@@ -541,7 +541,6 @@ script = ExtResource( 5 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Bugs/Bug1"]
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 20 )
-frame = 1
 playing = true
 
 [node name="Collider" type="CollisionShape2D" parent="Bugs/Bug1"]
@@ -563,7 +562,6 @@ script = ExtResource( 5 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Bugs/Bug2"]
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 20 )
-frame = 1
 playing = true
 
 [node name="Collider" type="CollisionShape2D" parent="Bugs/Bug2"]
@@ -585,6 +583,7 @@ script = ExtResource( 5 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Bugs/Bug3"]
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 20 )
+frame = 1
 playing = true
 
 [node name="Collider" type="CollisionShape2D" parent="Bugs/Bug3"]
@@ -606,6 +605,7 @@ script = ExtResource( 5 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Bugs/Bug4"]
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 20 )
+frame = 1
 playing = true
 
 [node name="Collider" type="CollisionShape2D" parent="Bugs/Bug4"]
@@ -627,7 +627,6 @@ script = ExtResource( 5 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Bugs/Bug5"]
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 20 )
-frame = 1
 playing = true
 
 [node name="Collider" type="CollisionShape2D" parent="Bugs/Bug5"]
@@ -649,6 +648,7 @@ script = ExtResource( 5 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Bugs/Bug8"]
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 20 )
+frame = 1
 playing = true
 
 [node name="Collider" type="CollisionShape2D" parent="Bugs/Bug8"]
@@ -670,7 +670,6 @@ script = ExtResource( 5 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Bugs/Bug9"]
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 20 )
-frame = 1
 playing = true
 
 [node name="Collider" type="CollisionShape2D" parent="Bugs/Bug9"]

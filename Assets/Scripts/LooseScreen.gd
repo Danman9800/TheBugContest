@@ -114,7 +114,7 @@ func _process(delta):
 			Global.music_on = true
 		
 		if Global.music_on:
-			$Music.stream = load("res://Assets/Music/woods.wav")
+			$Music.stream = load("res://Assets/Music/2021-10-19_-_Funny_Bit_-_www.FesliyanStudios.com.mp3")
 			$Music.play()
 			
 		else:
@@ -128,5 +128,5 @@ func _process(delta):
 
 
 func _on_Blip_finished():
-	Global.start_bg_music_pos = $Music.get_playback_position()
+	Global.start_bg_music_pos = 0
 	get_tree().change_scene("res://Assets/Scenes/Start.tscn")

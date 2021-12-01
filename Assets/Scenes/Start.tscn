@@ -19,7 +19,7 @@
 [ext_resource path="res://Assets/Entities/Info.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Assets/Sprites/backdrop.png" type="Texture" id=18]
 [ext_resource path="res://Assets/Entities/Controls.tscn" type="PackedScene" id=19]
-[ext_resource path="res://Assets/Music/woods.wav" type="AudioStream" id=20]
+[ext_resource path="res://Assets/Music/2021-10-19_-_Funny_Bit_-_www.FesliyanStudios.com.mp3" type="AudioStream" id=20]
 
 [sub_resource type="AtlasTexture" id=34]
 atlas = ExtResource( 5 )
@@ -354,14 +354,14 @@ tracks/0/keys = {
 
 [sub_resource type="SpriteFrames" id=40]
 animations = [ {
-"frames": [ ExtResource( 13 ) ],
-"loop": true,
-"name": "On",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 9 ) ],
 "loop": true,
 "name": "Off",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 13 ) ],
+"loop": true,
+"name": "On",
 "speed": 5.0
 } ]
 
@@ -638,7 +638,7 @@ __meta__ = {
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-playback_speed = 0.5
+playback_speed = 0.6
 anims/Start_Fade = SubResource( 39 )
 
 [node name="highScore" type="Label" parent="."]
@@ -809,7 +809,7 @@ visible = false
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 20 )
-volume_db = -3.0
+volume_db = -9.0
 pitch_scale = 0.9
 autoplay = true
 

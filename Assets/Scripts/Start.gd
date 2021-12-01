@@ -22,7 +22,7 @@ func _ready():
 	if Global.music_on:
 		$MusicOff.texture = load("res://Assets/Sprites/Ui/musicOn.png")
 		if Global.start_bg_music_pos == 0:
-			$Music.stream = load("res://Assets/Music/woods.wav")
+			$Music.stream = load("res://Assets/Music/2021-10-19_-_Funny_Bit_-_www.FesliyanStudios.com.mp3")
 			$Music.play()
 		
 		
@@ -142,7 +142,7 @@ func _process(delta):
 			Global.music_on = true
 		
 		if Global.music_on:
-			$Music.stream = load("res://Assets/Music/woods.wav")
+			$Music.stream = load("res://Assets/Music/2021-10-19_-_Funny_Bit_-_www.FesliyanStudios.com.mp3")
 			$Music.play()
 			
 		else:
